@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Open+Sans&family=Poppins:wght@300&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Open+Sans&family=Poppins:wght@300&family=Roboto:wght@100;300;400&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Open+Sans&family=Poppins:wght@300&family=Roboto:wght@100&family=Source+Sans+Pro&display=swap");
+* {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #222327;
+}
+
+.sontainer {
+  max-width: 1140px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 90%;
+  z-index: 999;
+  transform: translate(-50%, -80%);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+nav ul li {
+  margin-left: 15px;
+  list-style-type: none;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  transition: 0.5s ease-in-out;
+  font-size: 1.2rem;
+}
+nav ul li:nth-child(6) {
+  display: none;
+  font-size: 1.8rem;
+}
+nav ul a {
+  text-decoration: none;
+  font-weight: 300px;
+  color: white;
+}
+nav .underLine {
+  width: 0;
+  height: 3.5px;
+  border-radius: 8px;
+  background-color: #eeeeff;
+}
+nav li:hover .underLine {
+  animation-name: animationLine;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes animationLine {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 50%;
+    left: 0;
+  }
+}
+.home {
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  position: relative;
+  background-color: #171717;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info h4 {
+  font-size: 3rem;
+  color: #cecece;
+}
+.info .typed-text {
+  color: #7DBA28;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+}
+
+.course {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: max-content;
+  padding: 15px 20px 25px 20px;
+  background-color: #0f0d0d;
+}
+.course .courseCard {
+  width: 23%;
+  border: 1px solid #1771ff;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.course .courseCard:hover {
+  box-shadow: 0 0 5px #ffffff;
+}
+.course .courseTop img {
+  width: 100%;
+}
+.course .courseBody {
+  padding: 15px;
+  color: #fff;
+  font-weight: 300;
+}
+.course .courseBody .cardTitle {
+  font-size: 1.8rem;
+  color: #f89451;
+}
+.course .courseBody a {
+  color: #f89e17;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.course .courseBody a:hover {
+  text-decoration: underline;
+}
+
+.coourse {
+  background-color: #fff;
+  color: #000;
+}
+
+footer {
+  background: #212529;
+  width: 100%;
+  height: 30vh;
+  color: #fff;
+  padding: 15px 20px;
+  font-weight: 300 !important;
+  font-size: 1rem;
+}
+footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+footer .row .col-md-6 {
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .home {
+    height: max-content;
+  }
+  .home .info h4 {
+    font-size: 1.8rem;
+  }
+
+  header nav li:nth-child(1) {
+    transform: translate(220%);
+  }
+  header nav li:nth-child(2) {
+    transform: translate(220%);
+  }
+  header nav li:nth-child(3) {
+    transform: translate(220%);
+  }
+  header nav li:nth-child(4) {
+    transform: translate(220%);
+  }
+  header nav li:nth-child(5) {
+    transform: translate(220%);
+  }
+  header nav li:nth-child(6) {
+    display: inline-block;
+    transform: translate(130%);
+  }
+
+  .course .courseCard {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  footer .row {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .row .col-md-6 {
+    margin-top: 15px;
+  }
+}
+.navShow {
+  transform: translate(-100%);
+}
+
+/*# sourceMappingURL=style.css.map */
